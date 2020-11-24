@@ -384,7 +384,7 @@ def preprocess(infile, outfile=sys.stdout, defines={},
     fin.close()
     if type(outfile) in types.StringTypes:
         if force and os.path.exists(outfile):
-            os.chmod(outfile, 0777)
+            os.chmod(outfile, '0777')
             os.remove(outfile)
         fout = open(outfile, 'w')
     else:
