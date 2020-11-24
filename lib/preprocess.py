@@ -771,7 +771,7 @@ def main(argv):
         optlist, args = getopt.getopt(argv[1:], 'hVvo:D:fkI:sc:',
             ['help', 'version', 'verbose', 'force', 'keep-lines',
              'substitute', 'content-types-path='])
-    except getopt.GetoptError, msg:
+    except getopt.GetoptError as msg:
         sys.stderr.write("preprocess: error: %s. Your invocation was: %s\n"\
                          % (msg, argv))
         sys.stderr.write("See 'preprocess --help'.\n")
