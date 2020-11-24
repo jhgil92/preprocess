@@ -826,7 +826,7 @@ def main(argv):
         contentTypesRegistry = ContentTypesRegistry(contentTypesPaths)
         preprocess(infile, outfile, defines, force, keepLines, includePath,
                    substitute, contentTypesRegistry=contentTypesRegistry)
-    except PreprocessError, ex:
+    except PreprocessError as ex:
         if log.isDebugEnabled():
             import traceback
             traceback.print_exc(file=sys.stderr)
