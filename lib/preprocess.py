@@ -261,7 +261,7 @@ def _evaluate(expr, defines):
     #interpolated = _interpolate(s, defines)
     try:
         rv = eval(expr, {'defined':lambda v: v in defines}, defines)
-    except Exception, ex:
+    except Exception as ex:
         msg = str(ex)
         if msg.startswith("name '") and msg.endswith("' is not defined"):
             # A common error (at least this is presumed:) is to have
